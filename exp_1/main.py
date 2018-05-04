@@ -20,7 +20,7 @@ def main():
     #plt.ion()
     
     #generate dataset
-    DATA_SET,LABEL = dataset.make_blobs(n_samples=60,centers=2,random_state=30)
+    DATA_SET,LABEL = dataset.make_blobs(n_samples=70,centers=2,random_state=50)
     plt.scatter(DATA_SET[:,0],DATA_SET[:,1],c=LABEL)
     bian = plt.axis()
     #
