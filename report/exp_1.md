@@ -1,6 +1,7 @@
 # 实验一 Perceptron Learning toward Linear Classification 
-timfan  
-[报告地址](https://github.com) : (https://github.com/timfaner/)
+>实验者:timfan  
+>[报告地址](https://github.com/timfaner/2018_PR_Experiment/blob/master/report/exp_1.md) : (https://github.com/timfaner/2018_PR_Experiment/blob/master/report/exp_1.md)
+>代码地址 : [Github](https://github.com/timfaner/2018_PR_Experiment/tree/master/exp_1)
 
 ## 实验原理
 
@@ -31,7 +32,7 @@ DATA_SET,LABEL = dataset.make_blobs(n_samples=70,centers=2,random_state=50)
 ## 实验结果
 
 ### 样本数100，学习率0.5
-![学习率0.5](images/1/1.png)
+![学习率0.5](images/1/1.png)  
 可以看到收敛次数为6
 ### 样本数100，学习率0.2
 ![学习率0.2](images/1/2.png)  
@@ -41,8 +42,8 @@ DATA_SET,LABEL = dataset.make_blobs(n_samples=70,centers=2,random_state=50)
 ![学习率0.05](images/1/4.gif)  
 样本数100，学习率0.05  
 ![学习率0.01](images/1/3.gif)  
-样本数100，学习率0.01    
----
+样本数100，学习率0.01     
+
 可以看到收敛速率越大收敛越快
 
 ### 收敛速率与迭代次数关系
