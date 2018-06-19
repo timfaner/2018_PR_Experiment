@@ -1,7 +1,7 @@
 # 实验二 Decision Tree Learning for Classification
 >实验者:timfan  
->[报告地址](https://github.com/timfaner/2018_PR_Experiment/blob/master/report/exp_2.md) : (https://github.com/timfaner/2018_PR_Experiment/blob/master/report/exp_2.md)
->代码地址 : [Github](https://github.com/timfaner/2018_PR_Experiment/tree/master/exp_2)
+>[报告地址](https://github.com/timfaner/2018_PR_Experiment/blob/master/report/exp_3.md) : (https://github.com/timfaner/2018_PR_Experiment/blob/master/report/exp_2.md)
+>代码地址 : [Github](https://github.com/timfaner/2018_PR_Experiment/tree/master/exp_3)
 
 ## 实验原理
 
@@ -27,11 +27,14 @@ def calcAttributeShannonEnt(dataSet):
 ```  
 
 
-`Iris Dataset from the UCI Machine Learning Repository` 数据集，得到结果   
+`Iris Dataset from the UCI Machine Learning Repository`    数据集，得到结果   
+
 ```[0.7080248, 
 1.068319625, 0.13864597, 0.14906466204], ....```
 
-### 1.2 挑选区分能力最强属性
+
+### 1.2 挑选区分能力最强属性  
+
 ```python
 atr_l,iv_l = calcAttributeShannonEnt(data_set) #计算属性信息熵和属性标准IV
 gain_list = []
@@ -64,7 +67,7 @@ for index,value in av_gr_dict.items():
 
 得到结果 `2` 即第三组标签
 
-###1.3 建立树并用恰当方式数据结构表示
+### 1.3 建立树并用恰当方式数据结构表示
 在python中可以使用字典来储存决策树，词典中键为属性，值为该属性不同子集下的树。  
 树的建立可理解为递归的过程，分类-建立树-剩下的数据集分类-建立树。。。以此类推。递归中止条件：被分类的数据集只有一个属性，或被分类的数据全都是相同类别。需要注意的是当数据集只有一个属性，其对应类别可简单处理为该数据集最多的类别。代码如下：  
 
@@ -100,7 +103,7 @@ def createTree(dataSet,labels):
 
 ```
 
-![1.3](images/2/1.png) 
+![1.3](images/3/1.png) 
 
 可以看出树太庞大，主要是该数据集为连续的数据，没有做到优化。
 
